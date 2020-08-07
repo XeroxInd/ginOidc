@@ -1,0 +1,21 @@
+# public ressources
+p, /agritracking/*, /vendors/*, GET
+p, /agritracking/*, /build/*, GET
+p, /agritracking/*, /images/*, GET
+p, /agritracking/*, /favicon.ico, GET
+p, /agritracking/*, /, GET
+
+# operator
+p, /agritracking/operator, /production/*, *
+
+# supervisor
+p, /agritracking/supervisor, /production/*, *
+p, /agritracking/supervisor, /reporting/*, *
+
+# administrator
+p, /agritracking/administrator, /production/*, *
+p, /agritracking/administrator, /reporting/*, *
+p, /agritracking/administrator, /admin/*, *
+
+# customer
+p, /agritracking/customer, /reporting/*, *
