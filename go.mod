@@ -1,4 +1,4 @@
-module git.solutions.im/Solutions.IM/ginoidc
+module git.solutions.im/Solutions.IM/ginOidc
 
 go 1.14
 
