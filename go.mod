@@ -1,4 +1,4 @@
-module ginOidc
+module ginoidc
 
 go 1.14
 
