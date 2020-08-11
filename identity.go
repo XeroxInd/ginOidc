@@ -6,7 +6,7 @@ const operator = "/agritracking/operator"
 const supervisor = "/agritracking/supervisor"
 const administrator = "/agritracking/administrator"
 const customer = "/agritracking/customer"
-const archivist = "agritracking/archivist"
+const archivist = "/agritracking/archivist"
 
 // Identity struct can be customize with all the field you need.
 // If a field is not present in the token, you have to setup Keycloak mapper to inject them.
