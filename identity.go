@@ -6,6 +6,7 @@ const operator = "/agritracking/operator"
 const supervisor = "/agritracking/supervisor"
 const administrator = "/agritracking/administrator"
 const customer = "/agritracking/customer"
+const archivist = "agritracking/archivist"
 
 // Identity struct can be customize with all the field you need.
 // If a field is not present in the token, you have to setup Keycloak mapper to inject them.
@@ -44,6 +45,10 @@ func (i Identity) IsAdministrator() bool {
 
 func (i Identity) IsCustomer() bool {
 	return contain(i.Groups, customer)
+}
+
+func (i Identity) IsArchivist() bool {
+	return contain(i.Groups, archivist)
 }
 
 // A user can be member of many groups, then we have to test if the group name we need is in the list.
