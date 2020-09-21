@@ -19,3 +19,6 @@ p, /agritracking/administrator, /admin/*, *
 
 # customer
 p, /agritracking/customer, /reporting/*, *
+
+# archivist
+p, /agritracking/archivist, /warehouse/*, *

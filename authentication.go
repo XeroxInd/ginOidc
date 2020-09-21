@@ -25,6 +25,7 @@ type InitParams struct {
 	Scopes        []string        // OAuth scopes. If you're unsure go with: []string{oidc.ScopeOpenID, "profile", "email"}
 	ErrorHandler  gin.HandlerFunc // errors handler. for example: func(c *gin.Context) {c.String(http.StatusBadRequest, "ERROR...")}
 	PostLogoutUrl url.URL         // user will be redirected to this URL after he logs out (i.e. accesses the '/logout' endpoint added in 'Init()')
+	LogoutPath    string          // openid logout URL part ex : "auth/realms/solutions/protocol/openid-connect/logout"
 }
 
 func Init(i InitParams) gin.HandlerFunc {
@@ -100,7 +101,7 @@ func logoutHandler(i InitParams) func(c *gin.Context) {
 		}
 		logoutUrl := i.Issuer
 		logoutUrl.RawQuery = (url.Values{"redirect_uri": []string{i.PostLogoutUrl.String()}}).Encode()
-		logoutUrl.Path = "auth/realms/solutions/protocol/openid-connect/logout"
+		logoutUrl.Path = i.LogoutPath
 		c.Redirect(http.StatusFound, logoutUrl.String())
 	}
 }

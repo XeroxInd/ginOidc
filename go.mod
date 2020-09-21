@@ -1,6 +1,6 @@
 module git.solutions.im/Solutions.IM/ginOidc
 
-go 1.14
+go 1.15
 
 require (
 	github.com/casbin/casbin/v2 v2.8.7
