@@ -1,4 +1,4 @@
-module git.solutions.im/Solutions.IM/ginOidc
+module github.com/XeroxInd/ginOidc
 
 go 1.16
 
